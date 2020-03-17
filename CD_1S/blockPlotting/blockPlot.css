@@ -4,32 +4,45 @@
     padding: 0px;
    }
    #wrapper{
-    width: 950px;
+    width: auto;
     background-color: silver;
-    margin: 0px auto;
+    margin: 20px auto;
+    display: inline-block;
    }
    #header{
     min-height: 150px;
     background-color: green;
+    margin: 20px;
    }
    #navigation{
     min-height: 300px;
     width: 200px;
     background-color: blue;
+    margin: 20px;
+    display: inline-block;
    }
    #main_content{
     min-height: 400px;
     width: 700px;
     background-color: red;
+    margin: 20px;
+    display: inline-block;
+    vertical-align: top;
    }
    .subcontents{
     min-height: 200px;
     width: 210px;
     background-color: yellow;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
    }
    #advertisement{
     min-height: 120px;
     width: 660px;
     background-color: purple;
+    margin-left: 10px;
+    margin-top: 10px;
    }
    
