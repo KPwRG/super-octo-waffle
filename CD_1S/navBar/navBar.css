@@ -1,6 +1,10 @@
+
+
+
 #wrapper{
     background-color: #82c3fc;
     color: white;
+    width: 0 auto;
 }
 
 #logo{
@@ -9,6 +13,7 @@
     width: 150px;
     margin-top: 20px;
     margin-left: 20px;
+    align-content: center;
 
 }
 
@@ -19,17 +24,33 @@
     font-weight: 580;
     font-stretch: extra-expanded;
     display: inline;
+    vertical-align: center;
 
 }
 
 #list{
     color: white;
-
+    display: inline-block;
+    margin-left: 600px;
+    vertical-align: center;
+    
 }
 
 .link{
     display: inline;
     text-align-last: right;
+}
 
+.border{
+    border-right: 2px solid white;
+}
+
+a{
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    margin-right: 25px;
+    color: white;
 
 }
