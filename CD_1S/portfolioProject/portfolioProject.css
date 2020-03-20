@@ -7,48 +7,99 @@
     
 .matting{
     width: 1000px;
-    height: 1000px;
+    height: 1080px;
     background-color: whitesmoke;
+    margin: 10px;
+    padding: 10px;
     } 
 
+.matting_header_1{
+    display: inline-block;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 5px;
+}
+
+.matting_header_2{
+    display: inline-block;
+    margin-left: 450px;
+    font-size: 22px;
+    font-weight: bolder;
+
+}
+
 .container{
-    width: 980px;
-    height: 900px;
-    background-color: purple;
-    padding: 10px;
+    width: 950px;
+    height: 925px;
+    background-color: rgb(78, 51, 51);
+    padding: 25px;
 }
 #my_photo{
     width: 400px;
-    border: 5px solid gray;
+    border: 5px solid rgb(165, 164, 164);
 }
 
 #about{
     background-color: whitesmoke;
-    width: 510px;
+    width: 495px;
     height: 270px;
     display: inline-block;
-    margin-left: 50px;
+    margin-left: 40px;
     vertical-align: top;
 }
 
+.about_body{
+    padding: 10px;
+    font-size: 17px;
+}
+
 .content_header{
-    background-color: gray;
+    background-color: rgb(165, 164, 164);
     color: white;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: lighter;
 }
 
 .long_content{
     background-color: whitesmoke;
-    width: 280px;
-    height: 575px;
+    width: 296px;
+    height: 635px;
     display: inline-block;
-    margin: 20px;
+    margin-top: 15px;
     vertical-align: top;
 }
 
-.technologies{
-    background-color: gray;
+.long_content_2{
+    margin-left: 25px;
+}
+
+#technologies_1{
+    background-color: rgb(165, 164, 164);
+    color: white;
+    margin-top: 89px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+#technologies_2{
+    background-color: rgb(165, 164, 164);
     color: white;
     margin-top: 50px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+#technologies_3{
+    background-color: rgb(165, 164, 164);
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: lighter;
 }
 
 .matting_footer{
@@ -57,43 +108,56 @@
 
 .footer_links_1{
     display: inline-block;
-    margin-left: 200px;
+    margin-left: 360px;
+    font-size: 17px;
+    padding: 5px;
 }
 
 .footer_links_2{
     display: inline-block;
-    margin-left: 200px;
     vertical-align: bottom;
+    font-size: 20px;
 }
 
 .tech_icons_1{
     display: inline-block;
-    margin-left: 10px;
+    padding: 5px;
 }
 
-#ajax_img{
+.tech_icons{
     display: inline-block;
-    width: 37px;
+    width: 42px;
     margin: 5px;
 }
 
-#angular_img{
-    display: inline-block;
-    width: 37px;
-    margin: 5px;
-}
-
-#lamode_img{
+.content_img{
     display: inline-block;
     width: 280px;
-
 }
 
-.content_body{
+.long_content_body{
     margin: 10px;
     font-size: 17px;
 }
 
 .tech_icons_2{
     display: inline-block;
+    background-color: rgb(67, 133, 67);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 100px;
+    border: 1px solid black;
+    font-size: 13px;
+}
+
+.footer_icons{
+    display: inline-block;
+    width: 20px;
+    vertical-align: middle;
+}
+
+.footer_icon_space{
+    margin-left: 350px;
+    margin-top: 5px;
 }
