@@ -5,15 +5,15 @@
 	border: 0;
     }
     
-#matting{
+.matting{
     width: 1000px;
     height: 1000px;
     background-color: whitesmoke;
     } 
 
-#container{
+.container{
     width: 980px;
-    height: 950px;
+    height: 900px;
     background-color: purple;
     padding: 10px;
 }
@@ -39,6 +39,61 @@
 .long_content{
     background-color: whitesmoke;
     width: 280px;
-    height: 550px;
+    height: 575px;
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+}
+
+.technologies{
+    background-color: gray;
+    color: white;
+    margin-top: 50px;
+}
+
+.matting_footer{
+    margin-left: 20px;
+}
+
+.footer_links_1{
+    display: inline-block;
+    margin-left: 200px;
+}
+
+.footer_links_2{
+    display: inline-block;
+    margin-left: 200px;
+    vertical-align: bottom;
+}
+
+.tech_icons_1{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#ajax_img{
+    display: inline-block;
+    width: 37px;
+    margin: 5px;
+}
+
+#angular_img{
+    display: inline-block;
+    width: 37px;
+    margin: 5px;
+}
+
+#lamode_img{
+    display: inline-block;
+    width: 280px;
+
+}
+
+.content_body{
+    margin: 10px;
+    font-size: 17px;
+}
+
+.tech_icons_2{
     display: inline-block;
 }
