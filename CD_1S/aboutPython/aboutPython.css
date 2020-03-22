@@ -7,7 +7,7 @@
 
 .background {
     width: 970px;
-    height: 970px;
+    height: 800px;
     background-color: #245076;
     margin: 10px;
     }
@@ -18,53 +18,117 @@
     display: inline-block;
     }
 
-.body_header{
+.header_box{
     display: inline-block;
     vertical-align: top;
-    margin-left: 310px;
+    margin-left: 200px;
+}
+
+.body_header{
+    vertical-align: top;
+    margin-left: 190px;
     margin-top: 10px;
     font-size: 14px;
 }
+
+.top_box{
+    width: 275px;
+    height: 60px;
+    background-color: #444444;
+    margin-left: 90px;
+    margin-top: 5px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.search_box{
+    width: 153px;
+    height: 23px;
+    background-color: #ffffff;
+    display: inline-block;
+    color: #b6b6b6;
+    text-align: center;
+    padding-top: 8px;
+    border: 2px solid #b6b6b6;
+    margin-top: 13px;
+    margin-left: 50px;
+    font-size: 12px;
+}
+
+.go_box{
+    width: 30px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: middle;   
+    background-color: #245076;
+    text-align: center;
+    color: #c4d0d9;
+    padding-top: 5px;
+    border-radius: 5px;
+    border: 2px solid #b6b6b6;
+    font-size: 11px;
+    margin-left: 5px;
+}
+
 .body_list{
     display: inline-block;
     text-align: center;
-    margin-left: 25px;
+    margin-left: 75px;
+    margin-top: 25px;
     }
 
 .list_style{
     list-style: none;
 }
+
+.yellow_bullet{
+    color: #f3cc32;
+    font-size: 10px;
+}
+
+.white_text_list{
+    color: white;
+    font-size: 19px;
+    font-style: normal;
+}
 .body{
     display: inline-block;
     text-align: center;
-    width:700px;
+    width: 640px;
     vertical-align: top;
+    margin-left: 30px;
+    margin-top: 15px;
 }
 
 .body_yellow{
-    display: inline-block;
-    text-align: center;
-    width: 700px;
+    font-size: 19px;
+    padding-top: 5px;
+    font-style: italic;
+    color: #f3cc32;
 }
-.top_box{
-    width: 250px;
-    height: 50px;
-    background-color: #444444;
-    margin-right: 10px;
-    display: inline-block;
 
-    }
-
+.list_pad{
+    padding: 5px;
+}
 .header{
     display: inline-block;
 }
 
 .middle_box{
-    width: 970px;
-    height: 50px;
+    width: 870px;
+    height: 45px;
     background-color: #487fad;
     display: inline-block;
-    margin-top: 50px;
+    margin-left: 75px;
+    border-radius: 5px;
+}
+
+.middle_box_text{
+    display: inline-block;
+    color: white;
+    margin-left: 38px;
+    font-size: 25px;
+    padding-top: 8px;
 }
 
 .middle_text{
@@ -74,60 +138,67 @@
 
 .bottom_box{
     width: 970px;
-    height: 100px;
+    height: 225px;
     background-color: white;
     display: inline-block;
-    margin-top: 50px;
+    margin-top: 15px;
 }
 
 .bottom_box_text_left{
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 75px;
     width: 400px;
     height: 200px;
-    border-top: 2.5px solid #77aad7;
+    border-top: 4px solid #77aad7;
     vertical-align: top;
     margin-top: 10px;
 }
 
 .bottom_text_header_left{
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 95px;
+    font-size: 20px;
 }
 
 .bottom_text_left{
     display: inline-block;
     margin-left: 15px;
+    width: 300px;
 }
 
 .bottom_text_list_left{
     display: inline-block;
-    margin-left: 35px;
+    margin-left: 55px;
+    width: 250px;
 }
 
 .bottom_box_text_right{
     display: inline-block;
-    margin-left: 5px;
-    width: 400px;
+    margin-left: 20px;
+    width: 425px;
     height: 200px;
-    border-top: 2.5px solid #77aad7;
+    border-top: 4px solid #77aad7;
     vertical-align: top;
     margin-top: 10px;
+
 }
 
 .bottom_text_header_right{
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 95px;
+    font-size: 20px;
 }
 
 .bottom_text_right{
     display: inline-block;
     margin-left: 15px;
+    width: 322px;
+    text-align: center;
 }
 
 .bottom_text_list_right{
     display: inline-block;
-    margin-left: 35px;
+    margin-left: 75px;
 }
 
 .lb_text{
@@ -143,11 +214,27 @@
 }
 
 .body_footer_1{
-    color: #77aad7;
     display: inline-block;
+    margin-left: 150px;
+    margin-top: 58px;
 }
 
+
+.footer_1_text{
+    font-size: 17px;
+    color: #77aad7;
+    padding-left: 50px;
+    display: inline-block;
+}
 .body_footer_2{
     color: #77aad7;
+    font-size: 10px;
+    display: inline-block;
+    margin-left: 410px;
+    margin-top: 12px;
+}
+
+.list_style_white{
+    list-style: square;
 }
 
