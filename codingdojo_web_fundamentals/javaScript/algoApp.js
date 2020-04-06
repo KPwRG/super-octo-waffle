@@ -1,75 +1,75 @@
 //1) Given an array and a value Y, count and print the number of array values greater than Y.
 
-var t = 10;
-var z = [13,6,78,90,1];
-function greaterThanY(x,y){
-    for(var i=0; i<x.length; i++){
-        if(x[i] > 10){
-            console.log(x[i]);
-        }
-    }
-}
-greaterThanY(z,t);
+// var t = 10;
+// var z = [13,6,78,90,1];
+// function greaterThanY(x,y){
+//     for(var i=0; i<x.length; i++){
+//         if(x[i] > 10){
+//             console.log(x[i]);
+//         }
+//     }
+// }
+// greaterThanY(z,t);
 
 //2) Given an array, print the max, min and average values for that array.
 
-var q = [43,35,6,17];
-function maxMinAverage(x){
-    var max = -100;
-    var min = 100;
-    var sum = 0;
-    var average = sum/x.length;
-    for(var i=0; i<x.length; i++){
-        if(x[i] > max){
-            max = x[i];
-        }
-        if(x[i] < min){
-            min = x[i];
-        }
-        sum += i;
-    }
-    console.log("The max is"+" "+max);
-    console.log("The min is"+" "+min);
-    console.log("The average is"+" "+average);
-}
-maxMinAverage(q);
+// var q = [43,35,6,17];
+// function maxMinAverage(x){
+//     var max = -100;
+//     var min = 100;
+//     var sum = 0;
+//     var average = sum/x.length;
+//     for(var i=0; i<x.length; i++){
+//         if(x[i] > max){
+//             max = x[i];
+//         }
+//         if(x[i] < min){
+//             min = x[i];
+//         }
+//         sum += i;
+//     }
+//     console.log("The max is"+" "+max);
+//     console.log("The min is"+" "+min);
+//     console.log("The average is"+" "+average);
+// }
+// maxMinAverage(q);
 
 //3) Given an array of numbers, create a function that returns a new array where negative values were replaced with the string ‘Dojo’.   For example, replaceNegatives( [1,2,-3,-5,5]) should return [1,2, "Dojo", "Dojo", 5].
 
-var e = [-8,4,0,-9,10];
-function replacedNegatives(x){
-    var n = [];
-    for(var i=0; i<x.length; i++){
-        if(x[i] < 0){
-            n[i] = "Dojo";
-        }else{
-            n[i] = x[i];
-        }
-    }
-    return n;
-}
-var m = replacedNegatives(e);
-console.log(m);
+// var e = [-8,4,0,-9,10];
+// function replacedNegatives(x){
+//     var n = [];
+//     for(var i=0; i<x.length; i++){
+//         if(x[i] < 0){
+//             n[i] = "Dojo";
+//         }else{
+//             n[i] = x[i];
+//         }
+//     }
+//     return n;
+// }
+// var m = replacedNegatives(e);
+// console.log(m);
 
 //4) Given array, and indices start and end, remove values in that index range, working in-place (hence shortening the array).  For example, removeVals([20,30,40,50,60,70],2,4) should return [20,30,70].
 
-var q = [12,13,14,15,16,17,18,19];
-var w = 3;
-var r = 6;
-function shorteningArray(x,y,z){
-    var c = [];
-    for(var i=0; i<x.length; i++){
-        if(i < w){
-            c.push(x[i]);
-        }
-        if(i > r){
-            c.push(x[i]);
-        }
-    }
-    return c;
-}
-var m = shorteningArray(q,w,r);
-console.log(m);
+// var q = [12,13,14,15,16,17,18,19];
+// var w = 3;
+// var r = 6;
+// function shorteningArray(x,y,z){
+//     var c = [];
+//     for(var i=0; i<x.length; i++){
+//         if(i < w){
+//             c.push(x[i]);
+//         }
+//         if(i > r){
+//             c.push(x[i]);
+//         }
+//     }
+//     return c;
+// }
+// var m = shorteningArray(q,w,r);
+// console.log(m);
 
 //1) Return the given array, after setting any negative values to zero.  For example resetNegatives( [1,2,-1, -3]) should return [1,2,0,0].
 
@@ -228,3 +228,28 @@ console.log(m);
 // 6) Array: Second-Largest: Return the second-largest element of an array. Given [42,1,4,3.14,7], return 7.  If the array is too short, return null.
 
 // 7) Double Trouble: Create a function that changes a given array to list each existing element twice, retaining original order.  Convert [4, "Ulysses", 42, false] to [4,4, "Ulysses", "Ulysses", 42, 42, false, false].
+
+
+var arr = [1,2,3,4,5,6,7,8,9];
+function reverseArray(x){
+    var newArr = [];
+    for(var i=0, j=x.length-1; i<x.length; i++, j--){
+        newArr[i] = x[j];
+    }
+    return newArr;
+}
+var m = reverseArray(arr);
+console.log(m);
+
+var myArr = [5,4,3,0];
+function revArray(x){
+    var temp = 0;
+    for(var i=0; i<x.length/2; i++){
+        temp = x[i];
+        x[i] = x[x.length-1-i];
+        x[x.length-1-i] = temp;
+    }
+    return x;
+}
+var n = revArray(myArr);
+console.log(n);
