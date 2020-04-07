@@ -4,7 +4,7 @@ def a():
 
 
 print(a())
-# Prediction - 5
+# Prediction = 5
 
 # 2
 
@@ -14,7 +14,7 @@ def a():
 
 
 print(a()+a())
-# Prediction - 10
+# Prediction = 10
 
 # 3
 
@@ -25,7 +25,7 @@ def a():
 
 
 print(a())
-# Prediction - 5
+# Prediction = 5
 
 # 4
 
@@ -36,7 +36,7 @@ def a():
 
 
 print(a())
-# Prediction - 5
+# Prediction = 5
 
 # 5
 
@@ -47,7 +47,7 @@ def a():
 
 x = a()
 print(x)
-# Prediction - 5, None
+# Prediction = 5, None
 
 # 6
 
@@ -57,7 +57,7 @@ def a(b, c):
 
 
 print(a(1, 2) + a(2, 3))
-# Prediction - 3, 5
+# Prediction = 3, 5
 
 # 7
 
@@ -67,7 +67,7 @@ def a(b, c):
 
 
 print(a(2, 5))
-# Prediction - 25
+# Prediction = 25
 
 # 8
 
@@ -84,7 +84,7 @@ def a():
 
 
 print(a())
-# Prediction - 100, 10
+# Prediction = 100, 10
 
 # 9
 
@@ -100,7 +100,7 @@ def a(b, c):
 print(a(2, 3))
 print(a(5, 3))
 print(a(2, 3) + a(5, 3))
-# Predictions - 7, 14, 21
+# Prediction = 7, 14, 21
 
 # 10
 
@@ -111,7 +111,7 @@ def a(b, c):
 
 
 print(a(3, 5))
-# Prediction - 8
+# Prediction = 8
 
 # 11
 b = 500
@@ -126,7 +126,7 @@ def a():
 print(b)
 a()
 print(b)
-# Prediction - 500, 500, 300, 500
+# Prediction = 500, 500, 300, 500
 
 # 12
 b = 500
@@ -142,7 +142,7 @@ def a():
 print(b)
 a()
 print(b)
-# Predictions - 500, 500, 300, 500
+# Prediction = 500, 500, 300, 500
 
 # 13
 b = 500
@@ -158,7 +158,7 @@ def a():
 print(b)
 b = a()
 print(b)
-# Predictions - 500, 500, 300, 300
+# Prediction = 500, 500, 300, 300
 
 # 14
 
@@ -174,7 +174,7 @@ def b():
 
 
 a()
-# Predictions - 1, 3, 2
+# Prediction = 1, 3, 2
 
 # 15
 
@@ -193,4 +193,4 @@ def b():
 
 y = a()
 print(y)
-# Prediction - 1, 3, 5, 10
+# Prediction = 1, 3, 5, 10
