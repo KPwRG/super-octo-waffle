@@ -16,14 +16,16 @@ print(z)
 # Example: count_positives([1,6,-4,-2,-7,-2]) changes the list to [1,6,-4,-2,-7,2] and returns it
 
 
-# def countPositive(listInput):
-#     positiveCounter = 0
-#     for i in range(0, len(listInput), 1):
-#         if listInput[i] > 0:
-#             positiveCounter += 1
-#     listInput[i] = positiveCounter
-#     return listInput
+def countPositive(listInput):
+    positiveCounter = 0
+    for i in range(0, len(listInput), 1):
+        if listInput[i] > 0:
+            positiveCounter += 1
+    listInput[len(listInput)-1] = positiveCounter
+    return listInput
 
+print(countPositive([-1,1,1,1]))
+print(countPositive([1,6,-4,-2,-7,-2]))
 
 # Sum Total - Create a function that takes a list and returns the sum of all the values in the array.
 # Example: sum_total([1,2,3,4]) should return 10
@@ -69,15 +71,16 @@ print(x)
 # Example: minimum([]) should return False
 
 def returnMin(listInput):
-    minVal = 1000
+    if len(listInput) == 0:
+        return False
+    minVal = listInput[0]
     for i in range(0, len(listInput), 1):
         if listInput[i] < minVal:
             minVal = listInput[i]
-        return minVal
-    if len(listInput) == 0:
-        return False
+    return minVal
 
-z = returnMin([1,2,3,4,5,6])
+
+z = returnMin([37,2,1,-9])
 print(z)
 x = returnMin([])
 print(x)
@@ -87,20 +90,42 @@ print(x)
 # Example: maximum([]) should return False
 
 def returnMax(listInput):
-    maxVal = 0
+    if len(listInput) == 0:
+        return False
+    maxVal = listInput[0]
     for i in range(0, len(listInput), 1):
         if listInput[i] > maxVal:
             maxVal = listInput[i]
-        return maxVal
-    if len(listInput) == 0:
-        return False
+    return maxVal
 
-z = returnMax([1,2,3,4,5,6])
+
+z = returnMax([37,2,1,-9])
 print(z)
 x = returnMax([])
 print(x)
 
 # Ultimate Analysis - Create a function that takes a list and returns a dictionary that has the sumTotal, average, minimum, maximum and length of the list.
 # Example: ultimate_analysis([37,2,1,-9]) should return {'sumTotal': 31, 'average': 7.75, 'minimum': -9, 'maximum': 37, 'length': 4 }
+
+def ultimate_analysis(listInput):
+    newDictionary = {}
+    newDictionary["sumTotal"] = sumTotal(listInput)
+    newDictionary["average"] = returnAverage(listInput)
+    newDictionary["minimum"] = returnMin(listInput)
+    newDictionary["maximun"] = returnMax(listInput)
+    newDictionary["length of the list"] = returnLength(listInput)
+    return newDictionary
+
+print(ultimate_analysis([37,2,1,-9]))
+
 # Reverse List - Create a function that takes a list and return that list with values reversed. Do this without creating a second list. (This challenge is known to appear during basic technical interviews.)
 # Example: reverse_list([37,2,1,-9]) should return [-9,1,2,37]
+
+def reverse_list(listInput):
+    temp = 0
+    for i in range(0, len(listInput)//2, 1):
+        temp = listInput[i]
+        listInput[i] = listInput[len(listInput)-1-i]
+        listInput[len(listInput)-1-i] = temp
+    return listInput
+print(reverse_list([37,2,1,-9]))
