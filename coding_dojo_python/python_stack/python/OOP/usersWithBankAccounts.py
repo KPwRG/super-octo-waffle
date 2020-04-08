@@ -1,3 +1,9 @@
+class User:		
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
+        self.account = BankAccount(int_rate=0.02, balance=0)
+
 class BankAccount:
     def __init__(self, int_rate, balance):
         self.int_rate = int_rate
@@ -26,9 +32,10 @@ class BankAccount:
             self.balance += self.int_rate
         return self
 
-account1 = BankAccount(0.01, 1000)
-account2 = BankAccount(0.02, 2000)
+michael = User("Michael Myers", "themask@python.com")
+walter = User("Walter White", "methman@python.com")
+paul = User("Paul Lambert", "meatsauce@python.com")
 
-account1.deposit(100).deposit(200).deposit(500).withdrawal(1000).yield_interest().display_account_info()
-
-account2.deposit(100).deposit(50).withdrawal(1000).withdrawal(500).withdrawal(200).withdrawal(100).yield_interest().display_account_info()
+michael.account.deposit(200).deposit(15).deposit(45).withdrawal(50).display_account_info()
+walter.account.deposit(100).deposit(100).withdrawal(25).withdrawal(25).display_account_info()
+paul.account.deposit(500).withdrawal(50).withdrawal(25).withdrawal(250).display_account_info()
