@@ -18,11 +18,21 @@ def say(name):
 @app.route('/repeat/<num>/<word>')
 def repeat(num, word):
     print("*"*100)
+    num = int(num)
     print(num)
     print(word)
-    num = int(num)
     return word*num
 
+@app.route('/repeat2/<int:num>/<word>')
+def repeat2(num, word):
+    print("*"*100)
+    print(num)
+    print(word)
+    return word*num
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return "Sorry! No response. Try again."
 
 if __name__ == "__main__":
     app.run(debug=True)
