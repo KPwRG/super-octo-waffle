@@ -63,18 +63,24 @@ iterateDictionary(students)
 # Get Values From a List of Dictionaries
 # Create a function iterateDictionary2(key_name, some_list) that, given a list of dictionaries and a key name, the function prints the value stored in that key for each dictionary. For example, iterateDictionary2('first_name', students) should output:
 
-Michael
-John
-Mark
-KB
+# Michael
+# John
+# Mark
+# KB
 
+def iterateDictionary2(listInput):
+    for hondo in listInput:
+        for val in hondo.values():
+            print(val)
+
+iterateDictionary2(students)
 
 # And iterateDictionary2('last_name', students) should output:
 
-Jordan
-Rosales
-Guillen
-Tonel
+# Jordan
+# Rosales
+# Guillen
+# Tonel
 
 
 # Iterate Through a Dictionary with List Values
