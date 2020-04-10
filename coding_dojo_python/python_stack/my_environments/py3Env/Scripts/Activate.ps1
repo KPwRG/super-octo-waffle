@@ -27,7 +27,7 @@ function global:deactivate ([switch]$NonDestructive) {
 
 deactivate -nondestructive
 
-$env:VIRTUAL_ENV="C:\Users\mjham\OneDrive\Desktop\superOctoWaffle\coding_dojo_python\python_stack\my_environments\py3Env"
+$env:VIRTUAL_ENV="C:\Users\mjham\Documents\workspace\super-octo-waffle\coding_dojo_python\python_stack\my_environments\py3Env"
 
 if (! $env:VIRTUAL_ENV_DISABLE_PROMPT) {
     # Set the prompt to include the env name

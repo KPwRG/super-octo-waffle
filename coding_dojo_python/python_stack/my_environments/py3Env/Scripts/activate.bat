@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\Users\mjham\OneDrive\Desktop\superOctoWaffle\coding_dojo_python\python_stack\my_environments\py3Env"
+set "VIRTUAL_ENV=C:\Users\mjham\Documents\workspace\super-octo-waffle\coding_dojo_python\python_stack\my_environments\py3Env"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"

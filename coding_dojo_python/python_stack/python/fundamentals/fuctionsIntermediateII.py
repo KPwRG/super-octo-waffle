@@ -54,8 +54,9 @@ students = [
 # first_name - KB, last_name - Tonel
 
 def iterateDictionary(listInput):
-    for key in listInput:
-        print(key)
+    for hondo in listInput:
+        for key, val in hondo.items():
+            print(f"{key} {val}")
 
 iterateDictionary(students)
 
