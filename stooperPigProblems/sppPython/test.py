@@ -132,30 +132,85 @@
 
 # There are MANY ways to do this algo! Try more than one!
 
-def generateCoinChange(cents):
-    change= {
-        "Q" : 0,
-        "D" : 0,
-        "N" : 0,
-        "P" : 0
-    }
-    change["Q"]=cents//25
-    change["D"]=(cents%25)//10
-    change["N"]=((cents%25)%10)//5
-    change["P"]=((cents%25)%10)%5
+# def generateCoinChange(cents):
+#     change= {
+#         "Q" : 0,
+#         "D" : 0,
+#         "N" : 0,
+#         "P" : 0
+#     }
+#     change["Q"]=cents//25
+#     change["D"]=(cents%25)//10
+#     change["N"]=((cents%25)%10)//5
+#     change["P"]=((cents%25)%10)%5
 
-    return change
+#     return change
 
-print(generateCoinChange(33))
+# print(generateCoinChange(33))
     
 
-#  Zip Arrays into Map
-# Associative arrays are sometimes called maps
-# because a key (string) maps to a value. Given
-# two arrays, create an associative array (map)
-# containing keys of the first, and values of the
-# second. For arr1 = ["abc", 3, "yo"] and
-# arr2 = [42, "wassup", true], return
-# {"abc": 42, 3: "wassup", "yo": true}.
 
 
+
+# Singlely Linked List
+
+class Node:
+    def __init__(self, valueInput):
+        self.value = valueInput
+        self.next = None
+
+
+
+class SLL:
+    def __init__(self):
+        self.head = None
+
+    def append(self, value):
+        newnode = Node(value)
+        if self.head == None:
+            self.head = newnode 
+        else:
+            #runner is created to have a variable i can use to iterate to singly linked list
+            runner = self.head
+            #use a while loop to iterate
+            # print(runner.next) #this would print a node object
+            while runner.next != None:
+                runner = runner.next
+            runner.next = newnode
+        return self
+
+    def display(self):
+        print (self.head)
+        runner = self.head
+        outputstr = ""
+        while runner !=None:
+            outputstr += f"{runner.value}-->"
+            runner = runner.next
+
+        print(outputstr)
+        return self
+
+    def addtoFront(self, value):
+        newnode = Node(value)
+        newnode.next = self.head
+        self.head = newnode
+        return self
+
+    def contains(self, valueToFind):
+        if self.head == None:
+            return False
+        else:
+            runner = self.head
+            while runner != None:
+                if runner.value == valueToFind:
+                    print("true")
+                    return True
+                else:
+                    runner = runner.next
+            print("false")
+            return False
+
+
+sll1 = SLL()
+sll2 = SLL()
+sll1.append(5).append(8).append(3).addtoFront(4).addtoFront(1).display().contains(18)
