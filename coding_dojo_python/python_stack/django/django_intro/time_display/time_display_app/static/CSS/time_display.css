@@ -5,22 +5,23 @@
 	border: 0;
     }
 
-body{
-    text-align: center;
-}
 
 .top_box{
-    width: 250px;
-    height: 100px;
-    margin: 25px;
+    width: 400px;
+    height: 75px;
+    margin: 0 auto;
+    margin-top: 25px;
+    line-height: 75px;
     text-align: center;
-    background-color: rgb(17, 136, 240);
+    background-color: rgb(95, 97, 99);
 }
 
 .bottom_box{
-    width: 250px;
+    width: 400px;
     height: 250px;
-    margin: 25px;
+    margin: 0 auto;
+    margin-top: 25px;
+    line-height: 250px;
     text-align: center;
-    background-color: rgb(10, 195, 241);
-}
+    background-color: rgb(154, 157, 158);
+    }
