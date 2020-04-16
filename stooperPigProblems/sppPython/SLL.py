@@ -77,9 +77,23 @@ class SLL:
             runner.next = None
         return self
 
+    def moveMinToFront(self):
+            minVal = self.head.value
+            runner = self.head
+            while runner.next:
+                if runner.next.value < minVal:
+                    minVal = runner.next.value
+                    nodeBeforeMin = runner
+                    minNode = runner.next
+                runner = runner.next
+            nodeBeforeMin.next = nodeBeforeMin.next.next
+            minNode.next = self.head
+            self.head = minNode
+            return self
 
 
 sll1 = SLL()
-sll2 = SLL()
-sll1.append(5).append(3).append(6).display().removeFront().display()
-sll2.removeFront().display()
+# sll2 = SLL()
+# sll1.append(5).append(3).append(6).append(2).append(10).append(17).display()
+sll1.append(5).append(3).append(6).append(2).append(10).append(17).moveMinToFront().display()
+# sll2.removeFront().display()
