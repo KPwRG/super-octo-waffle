@@ -11,7 +11,7 @@ class SLL:
     def __init__(self):
         self.head = None
 
-    def append(self, value):
+    def addToBack(self, value):
         newnode = Node(value)
         if self.head == None:
             self.head = newnode 
@@ -91,9 +91,27 @@ class SLL:
             self.head = minNode
             return self
 
+    def appendVal(self, value, valueToFind):
+        newNode = Node(value)
+        runner = self.head
+        if self.head == None:
+            self.head = newNode
+        else:
+            while runner.next != None:
+                if runner.value == valueToFind:
+                    newNode.next = runner.next
+                    runner.next = newNode
+                    return self
+                else:
+                    runner = runner.next
+        runner.next = newNode
+        return self
+
+
+
+
+
 
 sll1 = SLL()
-# sll2 = SLL()
-# sll1.append(5).append(3).append(6).append(2).append(10).append(17).display()
-sll1.append(5).append(3).append(6).append(2).append(10).append(17).moveMinToFront().display()
-# sll2.removeFront().display()
+sll1.addToBack(5).addToBack(3).addToBack(7).addToBack(2)
+sll1.appendVal(12,7).display()
