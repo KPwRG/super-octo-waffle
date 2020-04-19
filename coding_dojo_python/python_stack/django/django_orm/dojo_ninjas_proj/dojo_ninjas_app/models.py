@@ -4,7 +4,7 @@ class Dojos(models.Model):
     name = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
     state = models.CharField(max_length=255)
-    desc = models.TextField(null=True)
+    desc = models.TextField(default="old dojo")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -19,5 +19,5 @@ class Ninjas(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     
     def __repr__(self):
-        return f"<Ninjas objects: (({self.first_name} + {self.last_name}) ({self.id}))>"
+        return f"<Ninjas objects: {self.first_name} {self.last_name} ({self.id})>"
 
