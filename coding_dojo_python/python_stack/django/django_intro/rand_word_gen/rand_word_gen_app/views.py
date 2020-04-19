@@ -7,7 +7,7 @@ def index(request):
     else:
         request.session['counter'] += 1
 
-    if request.session['counter'] <= 1:
+    if request.session['counter'] <= 0:
         random_word = ""
     else:
         random_word = get_random_string(length=14)
