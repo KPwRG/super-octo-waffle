@@ -1,0 +1,28 @@
+* {
+	outline: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
+    }
+
+.matting{
+    text-align: center;
+}
+
+.local{
+    display: inline-block;
+    margin: 15px;
+    border: 1px solid black;
+    width: 180px;
+    height: 180px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.activities{
+    margin: 15px;
+    border: 1px solid black;
+    width: 835px;
+    height: 150px;
+    margin-left: 350px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="matting">
+    <h1>Ninja Gold</h1>
+    <p>Your gold: 0</p>
+    <div class="local">
+        <h3>Farm</h3>
+        <p>(earns 10-20 golds)</p>
+        <form action="" method="post">
+            {% csrf_token%}
+            <input type="submit" value="Find Gold!">
+        </form>
+    </div>
+    <div class="local">
+        <h3>Cave</h3>
+        <p>(earns 5-10 golds)</p>
+        <form action="" method="post">
+            {% csrf_token%}
+            <input type="submit" value="Find Gold!">
+        </form>
+    </div>
+    <div class="local">
+        <h3>House</h3>
+        <p>(earns 2-5 golds)</p>
+        <form action="" method="post">
+            {% csrf_token%}
+            <input type="submit" value="Find Gold!">
+        </form>
+    </div>
+    <div class="local">
+        <h3>Casino</h3>
+        <p>(earns/takes 0-50 golds)</p>
+        <form action="" method="post">
+            {% csrf_token%}
+            <input type="submit" value="Find Gold!">
+        </form>
+    </div>
+    <p>Activities:</p>
+        <div class="activities">
+
+        </div>
+    </div>
+</body>
+</html>
