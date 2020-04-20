@@ -23,6 +23,9 @@
     margin: 15px;
     border: 1px solid black;
     width: 835px;
-    height: 150px;
+    height: 300px;
     margin-left: 350px;
+    padding: 15px;
+    overflow: scroll;
+    text-align: left;    
 }
