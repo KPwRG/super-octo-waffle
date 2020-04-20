@@ -32,7 +32,6 @@ class SLL:
         while runner !=None:
             outputstr += f"{runner.value}-->"
             runner = runner.next
-
         print(outputstr)
         return self
 
