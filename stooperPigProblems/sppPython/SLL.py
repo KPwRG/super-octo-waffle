@@ -60,7 +60,6 @@ class SLL:
             return self
         else:
             self.head = self.head.next
-
         return self
 
     def removeBack(self):

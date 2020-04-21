@@ -1,7 +1,7 @@
 # Queues
-# Has a front  & a back (dequeue)
-# Can only add to the end of the queue (enqueue)
-# Can only remove from the front of the queue (dequeue) (first in first out)
+# Has a Head & a Tail
+# Can only add to the Tail of the queue (enqueue)
+# Can only remove from the Head of the queue (dequeue) (First In First Out)
 
 class Node:
     def __init__(self, value):
