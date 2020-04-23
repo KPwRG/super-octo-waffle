@@ -3,6 +3,7 @@
 # Can only add to the Tail of the queue (enqueue)
 # Can only remove from the Head of the queue (dequeue) (First In First Out)
 
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -28,15 +29,17 @@ class Queue:
         if self.front == None:
             return None
         else:
+            valToReturn = self.front.value
             # frontToDequeue = self.front
             self.front = self.front.next
             # frontToDequeue.next = None
+            return valToReturn
 
-    def front(self):
-        if self.front != None:
-            return self.front.value
-        else:
-            return None
+    # def front(self):
+    #     if self.front != None:
+    #         return self.front.value
+    #     else:
+    #         return None
 
     def contains(self, valueToFind):
         if self.front == None:
@@ -71,10 +74,10 @@ class Queue:
             return count
 
     def display(self):
-        print (self.front)
+        print(self.front)
         runner = self.front
         outputstr = ""
-        while runner !=None:
+        while runner != None:
             outputstr += f"{runner.value}-->"
             runner = runner.next
         print(outputstr)
@@ -82,7 +85,6 @@ class Queue:
 
 
 
-
 newQueue = Queue()
-newQueue.enqueue(5).enqueue(8).enqueue(15)
-newQueue.front().display()
+newQueue.enqueue(5).enqueue(8).enqueue(15).dequeue().display()
+
