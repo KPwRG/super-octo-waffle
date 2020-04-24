@@ -8,6 +8,11 @@ class Node:
         self.value = value
         self.next = None
 
+class Queue:
+    def __init__(self):
+        self.front = None
+        self.back = None
+
 class Stack:
     def __init__(self):
         self.top = None
@@ -89,10 +94,22 @@ def compareStacks(stack1, stack2):
                 runner2 = runner2.next
         return True        
 
+# def stackToQueue(stack):
+#     newStack = Stack()
+#     newQueue = Queue()
+#     newNode = Node()
+#     if stack.top == None:
+#         return self
+#     else:
+#         runner = stack.top
+#         while runner != None:
+#             newNode.vaule = runner.value
+#                 newStack.self.top.next = newNode
+            
 
 firstStack = Stack()
-secondStack = Stack()
+# secondStack = Stack()
 firstStack.push(5).push(4).push(3)
-secondStack.push(5).push(4).push(-3)
+# secondStack.push(5).push(4).push(-3)
 
 print(compareStacks(firstStack, secondStack))
