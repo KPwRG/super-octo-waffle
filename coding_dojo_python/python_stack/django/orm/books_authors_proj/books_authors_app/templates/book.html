@@ -5,10 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     {% load static %}
     <link rel=”stylesheet” href=”{% static 'css/style.css' %}”>
 
     <style>
+        .matting{
+	        margin: 20px;
+	        display: inline-block;
+            width: auto;
+            vertical-align: top;
+        }
+
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
@@ -27,21 +35,23 @@
         }
     </style>
 
+
+
 </head>
 
 <body>
-    <div>
-    <h1>Books</h1>
+    <div class="matting">
+    <h1>Add a Book</h1>
     <form action="/createBook" method="post">
         {% csrf_token %}
-        <label>Book:</label><br>
-        <input type="text" name="bookTitle" id="" placeholder="Book Title"><br>
-        <label>Description:</label><br>
-        <textarea name="description" rows="4" cols="50" placeholder="Please provide a brief description of the book..."></textarea><br>
+        <p><label>Title:</label><br>
+        <input type="text" name="bookTitle" id="" placeholder="Book Title"></p>
+        <p><label>Description:</label><br>
+        <textarea name="description" rows="4" cols="50" placeholder="Please provide a brief description of the book..."></textarea></p>
         <button type="submit">Add</button>
     </form>
     </div>
-    <div>
+    <div class="matting">
     <table>
         <tr>
             <th>ID</th>
@@ -57,7 +67,7 @@
                 {{book.title}}
             </td>
             <td>
-                <a href="">View</a>
+                <a href="/books/{{book.id}}">View</a>
             </td>
         </tr>
         {% endfor %}

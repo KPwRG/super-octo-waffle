@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .matting{
+        padding: 10px;
+        margin-left: 25px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="matting">
+    <h1>{{bookInfo.title}}</h1>
+    <h3>ID: {{bookInfo.id}}</h3>
+    <p>Description: {{bookInfo.desc}}</p>
+    </div>
+    <h4>
+        <ul style ="list-style-type: none;">
+        {% for authors in bookAuthors %}
+            <li>{{ authors.first_name }} {{ authors.last_name }}</li>
+        {% endfor %}
+        </ul>
+    </h4>
+    <div class="matting">
+    <form action="/addAuthorToBook/{{bookInfo.id}}" method="post">
+        {% csrf_token %}
+        <select name="authorId" id="">
+            {% for authors in allAuthors %}
+            <option value="">{{authors.first_name}} {{authors.last_name}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Add">
+    </form>
+    </div>
+</body>
+</html>
