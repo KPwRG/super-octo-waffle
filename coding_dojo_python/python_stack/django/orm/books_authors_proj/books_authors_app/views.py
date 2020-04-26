@@ -28,7 +28,7 @@ def showBook(request, bookId):
     context = {
         'bookInfo': bookToShow,
         'bookAuthors': Authors.objects.filter(books=bookId),
-        'allAuthors': Authors.objects.all()
+        'allAuthors': Authors.objects.exclude(books=bookId)
     }
     return render(request, 'bookId.html', context)
 
@@ -37,7 +37,7 @@ def showAuthor(request, authorId):
     context = {
         'authorInfo': authorToShow,
         'authorBooks': Books.objects.filter(authors=authorId),
-        'allBooks': Books.objects.all()
+        'allBooks': Books.objects.exclude(authors=authorId)
     }
     return render(request, 'authorId.html', context)
 
