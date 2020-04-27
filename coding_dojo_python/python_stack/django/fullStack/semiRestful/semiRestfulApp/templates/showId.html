@@ -6,16 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>TV Show {{show.id}}</h1>
+    <h1>TV Show {{show.id}}</h1>  <p><a href="/shows">Go Back</a></p>
 
-    <h3>Title: {{show.title}}</h3>
-    <h3>Network: {{show.network}}</h3>
-    <h3>Release Date: {{show.release_date}}</h3>
-    <h3>Description: {{show.desc}}</h3>
+    <p>Title: {{show.title}}</p>
+    <p>Network: {{show.network}}</p>
+    <p>Release Date: {{show.release_date}}</p>
+    <p>Description: {{show.desc}}</p>
 
 
-    <h3>{{show.updated_at}}</h3>
+    <p>{{show.updated_at}}</p>
 
-    <h3><a href="/shows/{{show.id}}/edit">Edit</a> | <a href="/shows/delete">Delete</a></h3>
+    <p><a href="/shows/{{show.id}}/edit">Edit</a> | <a href="/shows/{{show.id}}/delete">Delete</a></p>
 </body>
 </html>

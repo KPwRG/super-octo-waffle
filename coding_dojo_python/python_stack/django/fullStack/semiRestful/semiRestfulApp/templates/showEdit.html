@@ -9,14 +9,22 @@
 
 <body>
     <h1>Edit Show {{show.id}}</h1>
-    <form action="/shows/update" method="post">
+    <p><a href="/shows">Go Back</a></p>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <form action="/shows/{{show.id}}/update" method="post">
         {%csrf_token%}
         <p><label>Title:</label><br>
             <input type="text" name="showTitle" id="" placeholder="{{show.title}}"></p>
         <p><label>Network:</label><br>
             <input type="text" name="showNetwork" id="" placeholder="{{show.network}}"></p>
         <p><label>Release Date:</label><br>
-                <input type="text" name="showReleaseDate" id="" placeholder="{{show.release_date}}"></p>
+            <input type="text" name="showReleaseDate" id="" placeholder="{{show.release_date}}"></p>
         <p><label>Description:</label><br>
             <textarea name="description" rows="4" cols="30"
                 placeholder="Please provide a brief description of the show..."></textarea></p>
