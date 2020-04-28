@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse, redirect
+from django.contrib import messages
+from .models import Registration
 
-# Create your views here.
+def index(request):
+    return HttpResponse("KPwRG")
