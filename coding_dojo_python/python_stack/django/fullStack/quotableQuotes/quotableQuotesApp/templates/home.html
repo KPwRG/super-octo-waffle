@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Success! Welcome {{loggedinUser.firstName}}!</h1>
+    <a href="/logout">Logout</a>
+    <h3>Your Quotes:</h3>
+    <table>
+        <tr>
+            <th>Quoted By</th>
+            <th>Quote</th>
+            <th>Added By</th>
+            <th>Date Added</th>
+            <th>Action</th>
+        </tr>
+        {% for quote in myQuotes %}
+        <tr>
+            <td>{{quote.quoterName}}</td>
+            <td>{{quote.quote}}</td>
+            <td><a href="/quote/{{quote.uploader.id}}">{{quote.uploader.firstName}}</a></td>
+            <td>{{quote.created_at}}</td>
+            {% if loggedinUser == quote.uploader %}
+            <td><a href="/delete/{{quote.id}}">Delete</a> | <a href="/edit/{{quote.id}}">Edit</a></td>
+            {% else %}
+            <td><a href="/removefromFav/{{quote.id}}">Remove from Favorites</a></td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </table>
+    <h3>Other Peoples Quotes:</h3>
+    <table>
+        <tr>
+            <th>Quoted By</th>
+            <th>Quote</th>
+            <th>Added By</th>
+            <th>Date Added</th>
+            <th>Action</th>
+        </tr>
+        {% for quote in notMyQuotes %}
+        <tr>
+            <td>{{quote.quoterName}}</td>
+            <td>{{quote.quote}}</td>
+            <td><a href="/quote/{{quote.uploader.id}}">{{quote.uploader.firstName}}</a></td>
+            <td>{{quote.created_at}}</td>
+            {% if loggedinUser == quote.uploader %}
+            <td><a href="">Delete</a></td>
+            {% else %}
+            <td><a href="/addtoFav/{{quote.id}}">Add To Favorites</a></td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/quote/add">Add Quote</a>
+</body>
+
+</html>
