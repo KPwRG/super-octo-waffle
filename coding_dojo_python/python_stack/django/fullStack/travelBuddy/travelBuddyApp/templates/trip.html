@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/home">Home</a>      <a href="/logout">Logout</a>
+    <h1>{{tripToShow.dest}}</h1>
+    <p>Planned By: {{tripToShow.travler.name}} </p>
+    <p>Description: {{tripToShow.desc}}</p>
+    <p>Travel Date From: {{tripToShow.tdFrom}}</p>
+    <p>Travel Date To: {{tripToShow.tdTo}}</p>
+
+
+    <h3>Other user's joining the trip:</h3>
+    <ul>
+    {% for travlers in tripToShow.travler.all %}
+        <li>{{travlers.firstName}}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

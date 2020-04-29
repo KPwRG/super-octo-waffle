@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="matting">
+        <a href="/home">Home</a>      <a href="/logout">Logout</a>
+        <h1>Add a Trip</h1>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <form action="/create" method="post">
+            {% csrf_token %}
+            <p><label>Destination:</label><br>
+            <input type="text" name="dest" id="" placeholer=" Trip Destination"></p>
+            <p><label>Description:</label><br>
+            <textarea name="desc" rows="4" cols="25" placeholder="Please provide a brief note on the travel..."></textarea></p>
+            <p><label>Trip Date From:</label><br>
+                <input type="date" name="tdFrom" id="" placeholer=""></p>
+                <p><label>Trip Date To:</label><br>
+                    <input type="date" name="tdTo" id="" placeholer=""></p>
+            <button type="submit">Add</button>
+        </form>
+        </div>
+</body>
+</html>
