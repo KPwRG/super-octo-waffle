@@ -1,14 +1,16 @@
 # Base case - simplest case output
 # Recursive case
+# “ String: In-Order Subsets
+# Create strSubsets(str). Return an array with every possible in-order character subset of str. The resultant array itself need not be in any specific order – it is the subset of letters in each string that must be in the same order as they were in the original string. Given “abc”, return an array that includes [“”, “c”, “b”, “bc”, “a”, “ac”, “ab”, “abc”] (in any order).”
+# Excerpt From: Martin Puryear. “Algorithm Challenges: E-book for Dojo Students.” iBooks.
 
-def rSigma(input):
-    if input <= 0:
-        return 0
-    elif input == 1:
-        return 1
+def ios(str, sub="", i=0):
+    if len(str) == i:
+        return [sub]
     else:
-        return input + rSigma(input-1)
+        return ios(str, sub+str[i], i+1) + ios(str, sub, i+1)
 
-# “ Recursive Factorial
-# Given num, return the product of ints from 1 up to num. If less than zero, treat as zero. If not integer, truncate. Experts tell us 0! is 1. rFact(3) = 6 (123). Also, rFact(6.5) = 720 (12345*6).”
+print(ios("abc"))
+
+
 
